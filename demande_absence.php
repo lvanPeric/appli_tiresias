@@ -12,7 +12,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="accueil_admin.html">Accueil</a>
+                <a class="navbar-brand" href="accueil_admin.php">Accueil</a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -31,16 +31,15 @@
                             <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="demande_absence.html">Demande d'absence<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="demande_absence.php">Demande d'absence<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="liste_demande_absence.html">Réponse aux absences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Déconnexion</a>
+                            <?php
+                                echo '<a class="nav-link" href="logout.php">Déconnexion</a>';
+                            ?>
                         </li>
                     </ul>
                 </div>
