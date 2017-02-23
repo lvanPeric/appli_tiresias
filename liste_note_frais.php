@@ -17,29 +17,28 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Remplir NDF</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="liste_note_frais.html">Fiche NDF</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="liste_fiche_renseignement.html">Fiche de renseignements</a>
-                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="liste_salarie.html">Liste des salariés<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="liste_note_frais.php">Fiche NDF<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
+                            <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="demande_absence.html">Demande d'absence</a>
+                            <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_demande_absence.html">Réponse aux absences</a>
+                            <a class="nav-link" href="liste_absence.php">Fiche d'absences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Connexion</a>
+                            <a class="nav-link" href="demande_absence.php">Demande d'absence</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Déconnexion</a>
+                            <a class="nav-link" href="liste_demande_absence.php">Réponse aux absences</a>
+                        </li>
+                        <li class="nav-item">
+                            <?php
+                            echo '<a class="nav-link" href="logout.php">Déconnexion</a>';
+                            ?>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +50,7 @@
             <div class="col-10"> </div>
             </div>
           <div class="form-group text-center text-down">
-            <h1> Liste des salariés </h1>
+            <h1> Liste des notes de frais </h1>
           </div>
             <table class="table table-striped">
                 <thead>
@@ -59,69 +58,80 @@
                         <th>#</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th>Note de Frais en pdf</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><a href="documents_salariés.html">1</a></th>
+                        <th scope="row">10</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">2</a></th>
+                        <th scope="row">9</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">3</a></th>
+                        <th scope="row">8</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">4</a></th>
+                        <th scope="row">7</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">5</a></th>
+                        <th scope="row">6</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">6</a></th>
+                        <th scope="row">5</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">7</a></th>
+                        <th scope="row">4</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">8</a></th>
+                        <th scope="row">3</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">9</a></th>
+                        <th scope="row">2</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="">10</a></th>
+                        <th scope="row">1</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Poste</th>
+                        <th><a href="">Note_frais-NOM_Prénom.pdf</a></th>
+                        <th>JJ-MM-AAAA</th>
                     </tr>
                 </tbody>
             </table>

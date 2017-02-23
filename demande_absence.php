@@ -19,22 +19,22 @@
                             <a class="nav-link" href="#">Remplir NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_note_frais.html">Fiche NDF</a>
+                            <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_fiche_renseignement.html">Fiche de renseignements</a>
+                            <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_salarie.html">Liste des salariés</a>
+                            <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
+                            <a class="nav-link" href="liste_absence.php">Fiche d'absences</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="demande_absence.php">Demande d'absence<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_demande_absence.html">Réponse aux absences</a>
+                            <a class="nav-link" href="liste_demande_absence.php">Réponse aux absences</a>
                         </li>
                         <li class="nav-item">
                             <?php
@@ -46,7 +46,10 @@
             </nav>
         </header>
         <div class="container">
-            <img src="https://lh5.googleusercontent.com/-1dGzpvr210Q/AAAAAAAAAAI/AAAAAAAAABo/dQP0LC7RtwE/photo.jpg" class="imglogo">
+            <div class="form-group row">
+                <img src="logo.jpg" class="rounded col-2" alt="logo de l'entreprise" width="150px" height="150px">
+                <div class="col-10"> </div>
+            </div>
             <h1 class="title1">Demande D'absence</h1>
             <div class="form-group row"> </div>
             <div class="form-group row"> </div>
@@ -87,7 +90,7 @@
             <h4 class="">Demande de congés</h4>
             <div class="form-group row"> </div>
             <fieldset class="form-group">
-                <legend>Radio buttons</legend>
+                <legend></legend>
                 <div class="form-check">
                     <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>

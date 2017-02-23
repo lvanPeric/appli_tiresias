@@ -18,115 +18,109 @@
                             <a class="nav-link" href="#">Remplir NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_note_frais.html">Fiche NDF</a>
+                            <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="liste_fiche_renseignement.html">Fiche de renseignements<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="liste_salarie.php">Liste des salariés<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_salarie.html">Liste des salariés</a>
+                            <a class="nav-link" href="liste_absence.php">Fiche d'absences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
+                            <a class="nav-link" href="demande_absence.php">Demande d'absence</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="demande_absence.html">Demande d'absence</a>
+                            <a class="nav-link" href="liste_demande_absence.php">Réponse aux absences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_demande_absence.html">Réponse aux absences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Déconnexion</a>
+                            <?php
+                            echo '<a class="nav-link" href="logout.php">Déconnexion</a>';
+                            ?>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <div class="container">
-            <div class="form-group row">
-                <div>
-                    <img src="logo.jpg" class="rounded" alt="logo de l'entreprise" width="150px" height="150px">  
-                </div>
-                <div class="col-6"> </div>
-                <div>
-                    <a type="button" class="btn btn-secondary btn-lg btn-down" href="fiche_renseignements.html">Remplir une fiche de renseignements</a>
-                </div>
+          <div class="form-group row">  
+            <img src="logo.jpg" class="rounded col-2" alt="logo de l'entreprise" width="150px" height="150px">
+            <div class="col-10"> </div>
             </div>
-            <div class="form-group text-center text-down">
-                <h1> Liste des fiches de renseignements </h1>
-            </div>
+          <div class="form-group text-center text-down">
+            <h1> Liste des salariés </h1>
+          </div>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Fiches de renseignements en pdf</th>
+                        <th>Poste</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">10</th>
+                        <th scope="row"><a href="documents_salariés.php">1</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">9</th>
+                        <th scope="row"><a href="">2</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">8</th>
+                        <th scope="row"><a href="">3</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">7</th>
+                        <th scope="row"><a href="">4</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">6</th>
+                        <th scope="row"><a href="">5</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">5</th>
+                        <th scope="row"><a href="">6</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">4</th>
+                        <th scope="row"><a href="">7</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
+                        <th scope="row"><a href="">8</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
+                        <th scope="row"><a href="">9</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><a href="">10</a></th>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th><a href="">Fiche_renseignement-NOM_Prénom.pdf</a></th>
+                        <th>Poste</th>
                     </tr>
                 </tbody>
             </table>

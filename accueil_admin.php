@@ -25,22 +25,22 @@
                             <a class="nav-link" href="#">Remplir NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_note_frais.html">Fiche NDF</a>
+                            <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_fiche_renseignement.html">Fiche de renseignements</a>
+                            <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_salarie.html">Liste des salariés</a>
+                            <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
+                            <a class="nav-link" href="liste_absence.php">Fiche d'absences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="demande_absence.php">Demande d'absence</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_demande_absence.html">Réponse aux absences</a>
+                            <a class="nav-link" href="liste_demande_absence.php">Réponse aux absences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="logout.php">Déconnexion</a>
@@ -63,28 +63,28 @@
             <div class="col-1"> </div>
             <a type="submit" class="btn btn-secondary btn-lg col-4" href="#">Compléter une note de frais</a>
             <div class="col-2"> </div>
-            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_note_frais.html">Liste des notes de frais</a>
+            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_note_frais.php">Liste des notes de frais</a>
             <div class="col-1"> </div>
         </div>
         <div class="form-group row">
             <div class="col-1"> </div>
-            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_fiche_renseignement.html">Fiches de renseignements</a>
+            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_fiche_renseignement.php">Fiches de renseignements</a>
             <div class="col-2"> </div>
-            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_salarie.html">Liste des salariés</a>
+            <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_salarie.php">Liste des salariés</a>
             <div class="col-1"> </div>
         </div>
         <div class="form-group row">
             <div class="col-1"> </div>
             <a type="button" class="btn btn-secondary btn-lg col-4" href="demande_absence.php">Remplir une fiche d'absence</a>
             <div class="col-2"> </div>
-            <a type="button" class="btn btn-secondary btn-lg col-4" href="liste_absence.html">Liste des demandes d'absence</a>
+            <a type="button" class="btn btn-secondary btn-lg col-4" href="liste_absence.php">Liste des demandes d'absence</a>
             <div class="col-1"> </div>
         </div>
         <div class="form-group row">
             <div class="col-1"> </div>
-            <a type="button" class="btn btn-secondary btn-lg col-4" href="validation_absence.html">Répondre aux demandes d'absence</a>
+            <a type="button" class="btn btn-secondary btn-lg col-4" href="validation_absence.php">Répondre aux demandes d'absence</a>
             <div class="col-2"> </div>
-            <a type="button" class="btn btn-secondary btn-lg col-4" href="changement_mdp.html">Changer le mot de passe</a>
+            <a type="button" class="btn btn-secondary btn-lg col-4" href="changement_mdp.php">Changer le mot de passe</a>
             <div class="col-1"> </div>
         </div>
     </body>

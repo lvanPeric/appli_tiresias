@@ -6,7 +6,7 @@
         <title>Changer de mot de passe</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     </head>
-    <boby>
+    <body>
     <img src="https://lh5.googleusercontent.com/-1dGzpvr210Q/AAAAAAAAAAI/AAAAAAAAABo/dQP0LC7RtwE/photo.jpg" class="imglogo">
     <form class="form-horizontal container">
         <h1 class="title container">Changer de Mot de Passe</h1>

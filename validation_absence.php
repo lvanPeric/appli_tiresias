@@ -20,28 +20,27 @@
                             <a class="nav-link" href="#">Remplir NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_note_frais.html">Fiche NDF</a>
+                            <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_fiche_renseignement.html">Fiche de renseignements</a>
+                            <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_salarie.html">Liste des salariés</a>
+                            <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="liste_absence.html">Fiche d'absences</a>
+                            <a class="nav-link" href="liste_absence.php">Fiche d'absences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="demande_absence.html">Demande d'absence</a>
+                            <a class="nav-link" href="demande_absence.php">Demande d'absence</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="validation_absence.html">Réponse aux absences<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="validation_absence.php">Réponse aux absences<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Connexion.html">Déconnexion</a>
+                            <?php
+                            echo '<a class="nav-link" href="logout.php">Déconnexion</a>';
+                            ?>
                         </li>
                     </ul>
                 </div>

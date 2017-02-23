@@ -40,7 +40,7 @@
 					setcookie("User", $_POST['loginSalarie'], time()+(60*3), "/");
 					setcookie("LUS", time(), time()+(60*3), "/");
 
-					header('Location:Accueil.html');
+					header('Location:Accueil.php');
 				} else {
 					echo "<script>alert('Login ou mot de passe incorrect')</script>";
 				}
