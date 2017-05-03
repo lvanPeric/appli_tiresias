@@ -9,7 +9,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="login.css"/>
         <title>Connexion</title>
-        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">

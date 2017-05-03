@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
     if (!isset($_SESSION['loginSalarie']) && !isset($_COOKIE['User'])){
         header('Location:Connexion.php');
     }
@@ -10,7 +13,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="accueil_admin.css"/>
         <title>Accueil</title>
-        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     </head>
     <body>
         <header>

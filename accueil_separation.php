@@ -1,9 +1,7 @@
 <?php
-if(!isset($_SESSION)) {
-    session_start();
-}
 
-$cnx = new PDO("mysql:host=localhost; dbname=appli_tiresias", 'root', '', [
+
+$cnx = new PDO("mysql:host=db; dbname=appli_tiresias", 'root', 'root', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
 ]);

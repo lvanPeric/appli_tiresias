@@ -6,9 +6,9 @@
 			$password = sha1($password);
 
 			try{
-					$Host='localhost';
+					$Host='db';
 					$User='root';
-					$Password='';
+					$Password='root';
 				$cnx = new PDO("mysql:host=$Host; dbname=appli_tiresias", $User, $Password);
 				$cnx -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

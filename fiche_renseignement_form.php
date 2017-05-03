@@ -3,8 +3,8 @@
     // Ouverture de la base de donnée
     $dbname = 'appli_tiresias';
     $user = 'root';
-    $password = '';
-    $host = 'localhost';
+    $password = 'root';
+    $host = 'db';
 
     $dbh = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $password, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

@@ -2,7 +2,7 @@
 if(!isset($_SESSION)) {
     session_start();
 }
-$cnx = new PDO("mysql:host=localhost; dbname=appli_tiresias", 'root', '', [
+$cnx = new PDO("mysql:host=db; dbname=appli_tiresias", 'root', 'root', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
 ]);
@@ -25,7 +25,7 @@ include('fiche_renseignement_form.php');
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <title>Fiche de renseignements</title>
-    <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>

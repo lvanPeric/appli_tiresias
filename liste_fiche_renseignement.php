@@ -1,8 +1,13 @@
+<?php
+if(!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr_FR">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
