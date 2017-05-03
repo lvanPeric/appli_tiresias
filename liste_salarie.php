@@ -1,8 +1,27 @@
+<?php
+if(!isset($_SESSION)) {
+    session_start();
+}
+
+$cnx = new PDO("mysql:host=db; dbname=appli_tiresias", 'root', 'root', [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+]);
+class salary {
+    public $idSalarie;
+    public $nomSalarie;
+    public $prenomSalarie;
+}
+
+$stmt = $cnx -> prepare("SELECT idSalarie, nomSalarie, prenomSalarie FROM salarie");
+$stmt -> EXECUTE();
+$salaries = $stmt -> fetchAll(PDO::FETCH_CLASS, "salary");
+?>
 <!DOCTYPE html>
 <html lang="fr_FR">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -64,66 +83,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                <? foreach ($salaries as $salary): ?>
                     <tr>
-                        <th scope="row"><a href="documents_salariés.php">1</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
+                        <th scope="row"><a href="documents_salariés.php"><?= $salary->idSalarie ?></a></th>
+                        <th><?= $salary->prenomSalarie ?></th>
+                        <th><?= $salary->nomSalarie ?></th>
                         <th>Poste</th>
                     </tr>
-                    <tr>
-                        <th scope="row"><a href="">2</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">3</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">4</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">5</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">6</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">7</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">8</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">9</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="">10</a></th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Poste</th>
-                    </tr>
+                <? endforeach; ?>
                 </tbody>
             </table>
         </div>
