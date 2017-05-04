@@ -1,6 +1,6 @@
 <div class="container">
     <img src="<?= base_url() ?>src/images/logo.jpg" class="rounded col-2" alt="logo de l'entreprise" width="150px" height="150px">
-
+    <?= $error ?? null ?>
     <form name="loginform" action="<?= base_url() ?>login" method="POST">
 
         <h1 class="text-center">Connexion</h1>

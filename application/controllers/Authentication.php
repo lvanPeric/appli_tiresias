@@ -11,22 +11,22 @@ class Authentication extends MY_Controller
         $this->load->library('form_validation');
     }
 
-    private function build($data)
+    private function build()
     {
         ob_start();
         //$this->load->view('menuView', $this->data);
-        $this->load->view('connexionView', $data);
+        $this->load->view('connexionView', $this->data);
         //$this->load->view('footerView');
-        $data['content'] = ob_get_clean();
+        $this->data['content'] = ob_get_clean();
 
         //$this->data['query'] = $this->home->getTest();
 
-        $this->load->view('layoutView', $data);
+        $this->load->view('layoutView', $this->data);
     }
 
     public function index()
     {
-        $this->build($this->data);
+        $this->build();
     }
 
     public function login()
@@ -48,7 +48,8 @@ class Authentication extends MY_Controller
             if ($this->auth->is_identify($data['loginSalarie'], $data['MdpSalarie'])) {
                 redirect('welcome');
             } else {
-                redirect();
+                $this->data['error']='<p>Nom d\'utilisateur ou Mot de passe incorrect</p>';
+                $this->build();
             }
         }
     }
