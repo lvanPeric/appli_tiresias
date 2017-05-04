@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
 	if(!isset($_SESSION['loginSalarie']) && isset($_POST['loginSalarie'])){
 		if(!empty($_POST['loginSalarie']) && !empty($_POST['MdpSalarie'])){
 			$login = filter_var($_POST['loginSalarie'], FILTER_SANITIZE_STRING);
@@ -29,7 +32,10 @@
 					$_SESSION['START'] = time();
 
 					setcookie("User", $_POST['loginSalarie'], time()+(60*3), "/");
+<<<<<<< HEAD
 					setcookie("LUS", time(), time()+(60*3), "/");
+=======
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
 
 					header('Location:accueil_admin.php');
 				} elseif ($em == true && $em['etreAdministrateurSalarie'] == 0) {
@@ -38,7 +44,10 @@
 					$_SESSION['START'] = time();
 
 					setcookie("User", $_POST['loginSalarie'], time()+(60*3), "/");
+<<<<<<< HEAD
 					setcookie("LUS", time(), time()+(60*3), "/");
+=======
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
 
 					header('Location:Accueil.php');
 				} else {

@@ -4,7 +4,11 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="demande_absence.css"/>
         <title>Demande d'absence</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+=======
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
     </head>
     <body>
         <header>
@@ -12,7 +16,13 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
+<<<<<<< HEAD
                 <a class="navbar-brand" href="accueil_admin.php">Accueil</a>
+=======
+                <?php
+                    include 'accueil_separation.php';
+                ?>
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">

@@ -9,7 +9,11 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="login.css"/>
         <title>Connexion</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+=======
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+>>>>>>> fb4426c17f0ae194f7e1fd6c774bdf4fdd3c80f8
     </head>
     <body>
         <div class="container">
