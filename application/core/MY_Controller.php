@@ -18,6 +18,7 @@ class MY_Controller extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('text');
         $this->load->library('session');
+        $this->load->library('bcrypt');
 
         $this->favicon = base_url() . "images/favicon.ico";
 

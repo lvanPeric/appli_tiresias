@@ -7,36 +7,56 @@ class Authentication extends MY_Controller
     {
         parent::__construct();
         $this->load->model('auth_model', 'auth');
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+    }
+
+    private function build($data)
+    {
+        ob_start();
+        //$this->load->view('menuView', $this->data);
+        $this->load->view('connexionView', $data);
+        //$this->load->view('footerView');
+        $data['content'] = ob_get_clean();
+
+        //$this->data['query'] = $this->home->getTest();
+
+        $this->load->view('layoutView', $data);
     }
 
     public function index()
     {
-        //$this->load->database();
-        //$this->load->model('home_model', 'home');
-        ob_start();
-        //$this->load->view('menuView', $this->data);
-        $this->load->view('connexionView', $this->data);
-        //$this->load->view('footerView');
-        $this->data['content'] = ob_get_clean();
-
-        //$this->data['query'] = $this->home->getTest();
-
-        $this->load->view('layoutView', $this->data);
+        $this->build($this->data);
     }
 
     public function login()
     {
-        $error_pre = "Veuillez remplir le champs: ";
-        $errors = [];
-        $result = [];
         $data = array_filter([
             'loginSalarie' => $_POST['loginSalarie'] ?? null,
             'MdpSalarie' => $_POST['MdpSalarie'] ?? null
         ]);
-        if ($this->auth->is_identify($data['loginSalarie'])) {
+        $this->form_validation->set_rules('loginSalarie', 'Nom d\'utilisateur', 'required');
+        $this->form_validation->set_rules('MdpSalarie', 'Mot de passe', 'required');
+        $this->form_validation->set_message('required', 'Le {field} est requis');
 
-        } else {
-            redirect('/');
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->index();
         }
+        else
+        {
+            if ($this->auth->is_identify($data['loginSalarie'], $data['MdpSalarie'])) {
+                redirect('welcome');
+            } else {
+                redirect();
+            }
+        }
+    }
+
+    public function hash()
+    {
+        $password = 'claude';
+        $hash = $this->bcrypt->hash_password($password);
+        var_dump($hash);
     }
 }
