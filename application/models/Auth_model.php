@@ -23,9 +23,9 @@ class Auth_model extends CI_Model {
         return $query->result();
     }
 
-    public function is_identify(string $identity, string $password): bool
+    public function identify(string $identity, string $password)
     {
-        $this->db->select('MdpSalarie');
+        $this->db->select('idSalarie, etreAdministrateurSalarie, MdpSalarie');
         $this->db->from('salarie');
         $this->db->where(['loginSalarie' => $identity]);
         $query = $this->db->get();
@@ -33,7 +33,7 @@ class Auth_model extends CI_Model {
         {
             if ($this->bcrypt->check_password($password, $query->result()[0]->MdpSalarie))
             {
-                return true;
+                return ["id" => $query->result()[0]->idSalarie, "admin" => $query->result()[0]->etreAdministrateurSalarie];
             }
             else
             {
@@ -45,6 +45,17 @@ class Auth_model extends CI_Model {
 
     public function is_admin(string $id): bool
     {
-
+        $this->db->select('etreAdministrateurSalarie');
+        $this->db->from('salarie');
+        $this->db->where(['idSalarie' => $id]);
+        $query = $this->db->get();
+        if ($query->result()[0]->etreAdministrateurSalarie == '1')
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

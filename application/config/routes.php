@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Authentication';
 $route['login']['POST'] = 'Authentication/login';
 $route['login']['GET'] = 'Authentication/index';
+$route['admin-home']['GET'] = 'Admin/index';
 
 $route['hash'] = 'Authentication/hash';
 

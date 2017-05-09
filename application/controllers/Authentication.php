@@ -26,7 +26,14 @@ class Authentication extends MY_Controller
 
     public function index()
     {
-        $this->build();
+        if(isset($_SESSION['user_id'])){
+            if ($this->auth->is_admin($_SESSION['user_id']))
+                redirect('admin-home');
+            else
+                redirect('welcome');
+        } else {
+            $this->build();
+        }
     }
 
     public function login()
@@ -45,8 +52,13 @@ class Authentication extends MY_Controller
         }
         else
         {
-            if ($this->auth->is_identify($data['loginSalarie'], $data['MdpSalarie'])) {
-                redirect('welcome');
+            if ($user = $this->auth->identify($data['loginSalarie'], $data['MdpSalarie'])) {
+                $_SESSION['user_id'] = $user['id'];
+                if($this->auth->is_admin($user['id'])){
+                    redirect('admin-home');
+                } else {
+                    redirect('welcome');
+                }
             } else {
                 $this->data['error']='<p>Nom d\'utilisateur ou Mot de passe incorrect</p>';
                 $this->build();
