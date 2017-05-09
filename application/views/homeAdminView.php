@@ -17,7 +17,7 @@
     </div>
     <div class="form-group row">
         <div class="col-1"> </div>
-        <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_fiche_renseignement.php">Fiches de renseignements</a>
+        <a type="submit" class="btn btn-secondary btn-lg col-4" href="<?= base_url() ?>liste-fiches-renseignements">Fiches de renseignements</a>
         <div class="col-2"> </div>
         <a type="submit" class="btn btn-secondary btn-lg col-4" href="liste_salarie.php">Liste des salariés</a>
         <div class="col-1"> </div>

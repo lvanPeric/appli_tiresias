@@ -6,12 +6,12 @@
         <h1 class="text-center">Connexion</h1>
         <div class="form-group row">
             <label for="inputEmail3" class="col-2 control-label">Login</label>
-            <input type="text" name="loginSalarie" class="form-control col-12" id="inputEmail3" placeholder="Login"  value="<?= set_value('loginSalarie'); ?>"/>
+            <input type="text" name="loginSalarie" class="form-control col-12" id="inputEmail3" placeholder="Login"  value="<?= set_value('loginSalarie'); ?>" required />
             <?= form_error('loginSalarie', '<div class="error">', '</div>'); ?>
         </div>
         <div class="form-group row">
             <label for="inputPassword3" class="col-2 control-label">Password</label>
-            <input type="password" name="MdpSalarie" class="form-control col-12" id="inputPassword3" placeholder="Password" />
+            <input type="password" name="MdpSalarie" class="form-control col-12" id="inputPassword3" placeholder="Password" required />
             <?= form_error('MdpSalarie', '<div class="error">', '</div>'); ?>
         </div>
         <div class="form-group row">

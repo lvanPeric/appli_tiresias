@@ -7,8 +7,6 @@ class Admin extends MY_Controller
     {
         parent::__construct();
         $this->load->model('auth_model', 'auth');
-        $this->load->helper('form');
-        $this->load->library('form_validation');
     }
     private function build()
     {

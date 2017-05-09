@@ -53,6 +53,8 @@ $route['default_controller'] = 'Authentication';
 $route['login']['POST'] = 'Authentication/login';
 $route['login']['GET'] = 'Authentication/index';
 $route['admin-home']['GET'] = 'Admin/index';
+$route['liste-fiches-renseignements']['GET'] = 'FicheRenseignement/index';
+$route['fiche-renseignements']['GET'] = 'FicheRenseignement/index_fiche';
 
 $route['hash'] = 'Authentication/hash';
 
