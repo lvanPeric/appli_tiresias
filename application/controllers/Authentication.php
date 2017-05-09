@@ -42,8 +42,8 @@ class Authentication extends MY_Controller
             'loginSalarie' => $_POST['loginSalarie'] ?? null,
             'MdpSalarie' => $_POST['MdpSalarie'] ?? null
         ]);
-        $this->form_validation->set_rules('loginSalarie', 'Nom d\'utilisateur', 'required');
-        $this->form_validation->set_rules('MdpSalarie', 'Mot de passe', 'required');
+        $this->form_validation->set_rules('loginSalarie', 'nom d\'utilisateur', 'required');
+        $this->form_validation->set_rules('MdpSalarie', 'mot de passe', 'required');
         $this->form_validation->set_message('required', 'Le {field} est requis');
 
         if ($this->form_validation->run() == FALSE)
@@ -60,7 +60,7 @@ class Authentication extends MY_Controller
                     redirect('welcome');
                 }
             } else {
-                $this->data['error']='<p>Nom d\'utilisateur ou Mot de passe incorrect</p>';
+                $this->data['error']="<p>Informations d'authentification incorrects</p>";
                 $this->build();
             }
         }
