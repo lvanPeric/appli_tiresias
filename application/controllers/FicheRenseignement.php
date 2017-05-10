@@ -118,7 +118,7 @@ class FicheRenseignement extends MY_Controller
                     ], [
                         'field' => 'lieuNaissanceSalarie',
                         'label' => 'lieu de naissance',
-                        'rules' => 'trim|required|valid_date|xss_clean'
+                        'rules' => 'trim|required|xss_clean'
                     ], [
                         'field' => 'numeroDepartement',
                         'label' => 'numéro du département',
