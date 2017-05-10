@@ -12,7 +12,7 @@
                     <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>remplir-fiche-renseignements">Fiche de renseignements</a>
+                    <a class="nav-link" href="<?= base_url() ?>liste-fiches-renseignements">Fiche de renseignements</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>
