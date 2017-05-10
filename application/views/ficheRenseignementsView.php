@@ -1,5 +1,5 @@
 <div class="container">
-    <form method="POST" action="<?= base_url().$this->uri->uri_string() ?>/insert">
+    <form method="POST" action="<?= base_url().$this->uri->uri_string() ?>">
         <div class="form-group row">
             <img src="<?= base_url() ?>src/images/logo.jpg" class="rounded col-2" alt="logo de l'entreprise" width="150px" height="150px">
             <div class="col-8"> </div>
@@ -13,14 +13,16 @@
             <div class="col-3 form-group row"> </div>
             <label for="example-date-input" class="col-3 col-form-label">Date d'entrée dans l'établissement</label>
             <div class="col-3">
-                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateDebutContrat">
+                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateDebutContrat" value="<?= set_value('dateDebutContrat'); ?>">
+                <?= form_error('dateDebutContrat', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-3 form-group row"> </div>
             <label for="example-date-input" class="col-3 col-form-label">Date de sortie de l'établissement</label>
             <div class="col-3">
-                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateFinReelleContrat">
+                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateFinReelleContrat" value="<?= set_value('dateFinReelleContrat'); ?>">
+                <?= form_error('dateFinReelleContrat', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row"> </div>
@@ -32,40 +34,46 @@
         <div class="form-group row">
             <label for="example-text-input" class="col-3 col-form-label">Nom</label>
             <div class="col-4">
-                <input class="form-control" type="text" placeholder="Nom" id="example-text-input" name="nomSalarie">
+                <input class="form-control" type="text" placeholder="Nom" id="example-text-input" name="nomSalarie" value="<?= set_value('nomSalarie'); ?>">
+                <?= form_error('nomSalarie', '<div class="error">', '</div>'); ?>
             </div>
             <label for="example-text-input" class="col-2 col-form-label">Prénom</label>
             <div class="col-3">
-                <input class="form-control" type="text" placeholder="Prénom" id="example-text-input" name="prenomSalarie">
+                <input class="form-control" type="text" placeholder="Prénom" id="example-text-input" name="prenomSalarie" value="<?= set_value('prenomSalarie'); ?>">
+                <?= form_error('prenomSalarie', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">
             <label for="example-text-input" class="col-3 col-form-label">Nom de jeune fille</label>
             <div class="col-9">
-                <input class="form-control" type="text" placeholder="Nom de jeune fille" id="example-text-input" name="nomJeuneFilleSalarie">
+                <input class="form-control" type="text" placeholder="Nom de jeune fille" id="example-text-input" name="nomJeuneFilleSalarie" value="<?= set_value('nomJeuneFilleSalarie'); ?>">
             </div>
         </div>
         <div class="form-group row">
             <label for="example-date-input" class="col-3 col-form-label">Date de naissance</label>
             <div class="col-9">
-                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateNaissanceSalarie">
+                <input class="form-control" type="date" placeholder="format : jj-mm-aaaa" id="example-date-input" name="dateNaissanceSalarie" value="<?= set_value('dateNaissanceSalarie'); ?>">
+                <?= form_error('dateNaissanceSalarie', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">
             <label for="example-text-input" class="col-3 col-form-label">Lieu de naissance</label>
             <div class="col-9">
-                <input class="form-control" type="text" placeholder="Lieu de naissance" id="example-text-input" name="lieuNaissanceSalarie">
+                <input class="form-control" type="text" placeholder="Lieu de naissance" id="example-text-input" name="lieuNaissanceSalarie" value="<?= set_value('lieuNaissanceSalarie'); ?>">
+                <?= form_error('lieuNaissanceSalarie', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">
             <label for="example-text-input" class="col-3 col-form-label">Département</label>
             <div class="col-4">
                 <select class="form-control" id="exampleSelect1" name="numeroDepartement" >
+                    <option value="">selectionner un département</option>
                     <?php foreach($departments as $key => $department): ?>
-                        <option value="<?php echo $department->numeroDepartement; ?>">
+                        <option value="<?php echo $department->numeroDepartement; ?>" <?= (set_value('numeroDepartement')==$department->numeroDepartement) ? "selected":"" ?>>
                             <?php echo $department->numeroDepartement." - ".$department->nomDepartement; ?></option>
                     <?php endforeach; ?>
                 </select>
+                <?= form_error('numeroDepartement', '<div class="error">', '</div>'); ?>
             </div>
             <label for="exampleSelect1" class="col-2 col-form-label">Pays</label>
             <div class="col-3">

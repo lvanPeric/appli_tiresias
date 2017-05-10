@@ -55,7 +55,8 @@ $route['login']['GET'] = 'Authentication/index';
 $route['admin-home']['GET'] = 'Admin/index';
 $route['liste-fiches-renseignements']['GET'] = 'FicheRenseignement/index';
 $route['remplir-fiche-renseignements']['GET'] = 'FicheRenseignement/index_fiche';
-$route['remplir-fiche-renseignements/insert']['POST'] = 'FicheRenseignement/insert_fiche';
+$route['remplir-fiche-renseignements']['POST'] = 'FicheRenseignement/insert_fiche';
+$route['remplir-fiche-renseignements/(:any)']['GET'] = 'FicheRenseignement/department_check/$1';
 
 $route['hash'] = 'Authentication/hash';
 

@@ -7,4 +7,11 @@ class Salary_model extends CI_Model
     {
         parent::__construct();
     }
+
+    public function department_check($str)
+    {
+        $this->db->where('numeroDepartement', $str);
+        $query = $this->db->count_all_results('departement');
+        return $query == 0 ? false : true;
+    }
 }
