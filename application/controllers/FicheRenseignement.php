@@ -7,6 +7,7 @@ class FicheRenseignement extends MY_Controller
     {
         parent::__construct();
         $this->load->model('auth_model', 'auth');
+        $this->load->model('salary_model', 'salary');
     }
 
     private function build($temp)
@@ -34,6 +35,10 @@ class FicheRenseignement extends MY_Controller
 
     public function index_fiche()
     {
+        $this->data['countries'] = $this->db->get('pays')->result();
+        $this->data['departments'] = $this->db->get('departement')->result();
+        $this->data['contrats'] = $this->db->get('type_de_contrat')->result();
+        $this->data['fonctions'] = $this->db->get('fonction')->result();
         if(isset($_SESSION['user_id'])) {
             if ($this->auth->is_admin($_SESSION['user_id']))
                 $this->build('ficheRenseignementsView');

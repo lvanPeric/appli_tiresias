@@ -61,18 +61,18 @@
             <label for="example-text-input" class="col-3 col-form-label">Département</label>
             <div class="col-4">
                 <select class="form-control" id="exampleSelect1" name="numeroDepartement" >
-                    <?php /*foreach($departements as $key => $departement): */?><!--
-                        <option value="<?php /*echo $departement['numeroDepartement']; */?>">
-                            <?php /*echo $departement['numeroDepartement']." - ".$departement['nomDepartement']; */?></option>
-                    --><?php /*endforeach; */?>
+                    <?php foreach($departments as $key => $department): ?>
+                        <option value="<?php echo $department->numeroDepartement; ?>">
+                            <?php echo $department->numeroDepartement." - ".$department->nomDepartement; ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <label for="exampleSelect1" class="col-2 col-form-label">Pays</label>
             <div class="col-3">
                 <select class="form-control" id="exampleSelect1" name="idPays" >
-<!--                    <?php /*foreach($countries as $key => $country): */?>
-                        <option value="<?php /*echo $country['idPays']; */?>"><?php /*echo  $country['nomPays']; */?></option>
-                    --><?php /*endforeach; */?>
+                    <?php foreach($countries as $key => $country): ?>
+                        <option value="<?php echo $country->idPays; ?>"><?php echo  $country->nomPays; ?></option>
+                    <?php endforeach; ?>
                 </select>
                 <!--<input class="form-control" type="text" placeholder="Pays" id="example-text-input" name="idPays">-->
             </div>
@@ -132,10 +132,10 @@
             <label for="example-text-input" class="col-2 col-form-label">Type de contrat signé</label>
             <div class="col-4">
                 <select class="form-control" id="exampleSelect1" name="idTypeContrat" >
-<!--                    <?php /*foreach($contrats as $key => $contrat): */?>
-                        <option value="<?php /*echo $contrat['idTypeContrat']; */?>">
-                            <?php /*echo $contrat['nomTypeContrat']; */?></option>
-                    --><?php /*endforeach; */?>
+                    <?php foreach($contrats as $key => $contrat): ?>
+                        <option value="<?php echo $contrat->idTypeContrat; ?>">
+                            <?php echo $contrat->nomTypeContrat; ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <label for="example-text-input" class="col-3 col-form-label">Nombres d'heures hebdomadaire</label>
@@ -147,10 +147,10 @@
             <label for="example-text-input" class="col-1 col-form-label">Fonction</label>
             <div class="col-3">
                 <select class="form-control" id="exampleSelect1" name="nomFonction" >
-<!--                    <?php /*foreach($fonctions as $key => $fonction): */?>
-                        <option value="<?php /*echo $fonction['idFonction']; */?>">
-                            <?php /*echo $fonction['nomFonction']; */?></option>
-                    --><?php /*endforeach; */?>
+                    <?php foreach($fonctions as $key => $fonction): ?>
+                        <option value="<?php echo $fonction->idFonction; ?>">
+                            <?php echo $fonction->NomFonction; ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <label for="example-text-input" class="col-1 col-form-label">Niveau</label>
