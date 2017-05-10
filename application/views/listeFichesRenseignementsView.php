@@ -5,7 +5,7 @@
         </div>
         <div class="col-6"> </div>
         <div>
-            <a type="button" class="btn btn-secondary btn-lg btn-down" href="<?= base_url() ?>fiche-renseignements">Remplir une fiche de renseignements</a>
+            <a type="button" class="btn btn-secondary btn-lg btn-down" href="<?= base_url() ?>remplir-fiche-renseignements">Remplir une fiche de renseignements</a>
         </div>
     </div>
     <div class="form-group text-center text-down">

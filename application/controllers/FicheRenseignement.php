@@ -23,7 +23,7 @@ class FicheRenseignement extends MY_Controller
 
     public function index()
     {
-        if(isset($_SESSION['user_id'])) {
+        if (isset($_SESSION['user_id'])) {
             if ($this->auth->is_admin($_SESSION['user_id']))
                 $this->build('listeFichesRenseignementsView');
             else
@@ -39,7 +39,7 @@ class FicheRenseignement extends MY_Controller
         $this->data['departments'] = $this->db->get('departement')->result();
         $this->data['contrats'] = $this->db->get('type_de_contrat')->result();
         $this->data['fonctions'] = $this->db->get('fonction')->result();
-        if(isset($_SESSION['user_id'])) {
+        if (isset($_SESSION['user_id'])) {
             if ($this->auth->is_admin($_SESSION['user_id']))
                 $this->build('ficheRenseignementsView');
             else
@@ -47,5 +47,23 @@ class FicheRenseignement extends MY_Controller
         } else {
             redirect(base_url());
         }
+    }
+
+    public function insert_fiche()
+    {
+        if (isset($_SESSION['user_id'])) {
+            if ($this->auth->is_admin($_SESSION['user_id'])) {
+                $data = array_filter([
+                    'name' => $_POST['name'] ?? null,
+                    'city' => $_POST['city'] ?? null,
+                    'postal_code' => $_POST['postal_code'] ?? null,
+                    'latitude' => $_POST['latitude'] ?? null,
+                    'longitude' => $_POST['longitude'] ?? null,
+                    'address' => $_POST['address'] ?? null,
+                    'description' => $_POST['description'] ?? null
+                ]);
+            }
+        }
+        redirect('welcome');
     }
 }

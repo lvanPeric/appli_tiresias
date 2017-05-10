@@ -3,7 +3,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="accueil_admin.php">Accueil</a>                <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand" href="<?= base_url() ?>">Accueil</a>                <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Remplir NDF</a>
@@ -12,7 +12,7 @@
                     <a class="nav-link" href="liste_note_frais.php">Fiche NDF</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="liste_fiche_renseignement.php">Fiche de renseignements</a>
+                    <a class="nav-link" href="<?= base_url() ?>remplir-fiche-renseignements">Fiche de renseignements</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="liste_salarie.php">Liste des salariés</a>

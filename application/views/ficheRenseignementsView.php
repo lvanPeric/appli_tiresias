@@ -1,5 +1,5 @@
 <div class="container">
-    <form method="POST" action="">
+    <form method="POST" action="<?= base_url().$this->uri->uri_string() ?>/insert">
         <div class="form-group row">
             <img src="<?= base_url() ?>src/images/logo.jpg" class="rounded col-2" alt="logo de l'entreprise" width="150px" height="150px">
             <div class="col-8"> </div>
