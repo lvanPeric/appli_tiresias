@@ -144,10 +144,10 @@ class FicheRenseignement extends MY_Controller
                     var_dump($data);
                 }
             } else {
-                redirect('welcome');
+                redirect();
             }
         } else {
-            redirect('welcome');
+            redirect();
         }
     }
 }
