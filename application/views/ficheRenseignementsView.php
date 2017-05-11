@@ -67,10 +67,10 @@
             <label for="example-text-input" class="col-3 col-form-label">Département</label>
             <div class="col-4">
                 <select class="form-control" id="exampleSelect1" name="numeroDepartement" >
-                    <option value="">selectionner un département</option>
+                    <option value="">---</option>
                     <?php foreach($departments as $key => $department): ?>
-                        <option value="<?php echo $department->numeroDepartement; ?>" <?= (set_value('numeroDepartement')==$department->numeroDepartement) ? "selected":"" ?>>
-                            <?php echo $department->numeroDepartement." - ".$department->nomDepartement; ?></option>
+                        <option value="<?= $department->numeroDepartement; ?>" <?= (set_value('numeroDepartement')==$department->numeroDepartement) ? "selected":"" ?>>
+                            <?= $department->numeroDepartement." - ".$department->nomDepartement; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <?= form_error('numeroDepartement', '<div class="error">', '</div>'); ?>
@@ -78,10 +78,13 @@
             <label for="exampleSelect1" class="col-2 col-form-label">Pays</label>
             <div class="col-3">
                 <select class="form-control" id="exampleSelect1" name="idPays" >
+                    <option value="">---</option>
                     <?php foreach($countries as $key => $country): ?>
-                        <option value="<?php echo $country->idPays; ?>"><?php echo  $country->nomPays; ?></option>
+                        <option value="<?= $country->idPays; ?>" <?= (set_value('idPays')==$country->idPays) ? "selected":"" ?>>
+                            <?= $country->nomPays; ?></option>
                     <?php endforeach; ?>
                 </select>
+                <?= form_error('idPays', '<div class="error">', '</div>'); ?>
                 <!--<input class="form-control" type="text" placeholder="Pays" id="example-text-input" name="idPays">-->
             </div>
         </div>
@@ -89,33 +92,32 @@
             <label for="example-text-input" class="col-3 col-form-label">Situation familiale</label>
             <div class="col-4">
                 <select class="form-control" id="exampleSelect1" name="situationFamilialeSalarie">
-                    <option>célibataire</option>
-                    <option>pacsé(e)</option>
-                    <option>marié(e)</option>
-                    <option>veuf(veuve)</option>
+                    <option value="">---</option>
+                    <?php $situations = ['célibataire', 'pacsé(e)', 'marié(e)', 'veuf(veuve)'] ?>
+                    <?php foreach($situations as $key => $situation): ?>
+                        <option value="<?= $situation ?>" <?= (set_value('situationFamilialeSalarie')==$situation) ? "selected":"" ?>>
+                            <?= $situation ?></option>
+                    <?php endforeach; ?>
                 </select>
+                <?= form_error('situationFamilialeSalarie', '<div class="error">', '</div>'); ?>
             </div>
             <label for="example-text-input" class="col-2 col-form-label">Nombre d'enfants</label>
             <div class="col-3">
                 <select class="form-control" id="exampleSelect1" name="nbEnfantSalarie">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                    <option value="">---</option>
+                    <?php for($i=0; $i <= 10; ++$i): ?>
+                        <option value="<?= $i ?>" <?= (set_value('nbEnfantSalarie')==$i) ? "selected":"" ?>>
+                            <?= $i ?></option>
+                    <?php endfor; ?>
                 </select>
+                <?= form_error('nbEnfantSalarie', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">
             <label for="example-text-input" class="col-3 col-form-label">Numéro de sécurité sociale</label>
             <div class="col-9">
-                <input class="form-control" type="text" placeholder="Numéro de sécurité sociale" id="example-text-input" name="numSecSocSalarie">
+                <input class="form-control" type="text" placeholder="Numéro de sécurité sociale" id="example-text-input" name="numSecSocSalarie" value="<?= set_value('numSecSocSalarie'); ?>">
+                <?= form_error('numSecSocSalarie', '<div class="error">', '</div>'); ?>
             </div>
         </div>
         <div class="form-group row">

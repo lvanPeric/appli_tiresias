@@ -21,4 +21,13 @@ class MY_Form_validation extends CI_Form_validation
         $year = (int) substr($date, 6, 4);
         return checkdate($month, $day, $year);
     }
+
+    public function valid_numero_secu($str) {
+        $myPattern = '/^[12][0-9]{2}[0-1][0-9](2[AB]|[0-9]{2})[0-9]{3}[0-9]{3}[0-9]{2}$/x';
+        if(preg_match($myPattern, $str)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

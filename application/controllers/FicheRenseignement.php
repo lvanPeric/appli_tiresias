@@ -39,10 +39,10 @@ class FicheRenseignement extends MY_Controller
 
     public function index_fiche()
     {
-        $this->data['countries'] = $this->db->get('pays')->result();
-        $this->data['departments'] = $this->db->get('departement')->result();
-        $this->data['contrats'] = $this->db->get('type_de_contrat')->result();
-        $this->data['fonctions'] = $this->db->get('fonction')->result();
+        $this->data['countries'] = $this->db->order_by('nomPays', 'ASC')->get('pays')->result();
+        $this->data['departments'] = $this->db->order_by('nomDepartement', 'ASC')->get('departement')->result();
+        $this->data['contrats'] = $this->db->order_by('nomTypeContrat', 'ASC')->get('type_de_contrat')->result();
+        $this->data['fonctions'] = $this->db->order_by('NomFonction', 'ASC')->get('fonction')->result();
         if (isset($_SESSION['user_id'])) {
             if ($this->auth->is_admin($_SESSION['user_id']))
                 $this->build('ficheRenseignementsView');
@@ -91,37 +91,43 @@ class FicheRenseignement extends MY_Controller
                         'label' => 'date de l\'entrée',
                         'rules' => 'trim|required|valid_date|xss_clean',
                         'errors' => [
-                            'required' => 'La %s est requise.',
+                            'required' => 'La %s est requise.'
                         ]
-                    ], [
+                    ],
+                    [
                         'field' => 'dateFinReelleContrat',
                         'label' => 'date de sortie',
                         'rules' => 'trim|required|valid_date|xss_clean',
                         'errors' => [
-                            'required' => 'La %s est requise.',
+                            'required' => 'La %s est requise.'
                         ]
-                    ], [
+                    ],
+                    [
                         'field' => 'nomSalarie',
                         'label' => 'nom',
                         'rules' => 'trim|required|xss_clean'
-                    ], [
+                    ],
+                    [
                         'field' => 'prenomSalarie',
                         'label' => 'prénom',
                         'rules' => 'trim|required|xss_clean'
-                    ], [
+                    ],
+                    [
                         'field' => 'dateNaissanceSalarie',
                         'label' => 'date de naissance',
                         'rules' => 'trim|required|valid_date|xss_clean',
                         'errors' => [
-                            'required' => 'La %s est requise.',
+                            'required' => 'La %s est requise.'
                         ]
-                    ], [
+                    ],
+                    [
                         'field' => 'lieuNaissanceSalarie',
                         'label' => 'lieu de naissance',
                         'rules' => 'trim|required|xss_clean'
-                    ], [
+                    ],
+                    [
                         'field' => 'numeroDepartement',
-                        'label' => 'numéro du département',
+                        'label' => 'département',
                         'rules' => [
                             'trim',
                             'required',
@@ -129,9 +135,43 @@ class FicheRenseignement extends MY_Controller
                             'xss_clean'
                         ],
                         'errors' => [
-                            'valid_department' => 'Le %s n\'est pas correct.',
+                            'valid_department' => 'Le %s n\'est pas correct.'
                         ]
-                    ]
+                    ],
+                    [
+                        'field' => 'idPays',
+                        'label' => 'pays',
+                        'rules' => [
+                            'trim',
+                            'required',
+                            ['valid_country', [$this->salary, 'country_check']],
+                            'xss_clean'
+                        ],
+                        'errors' => [
+                            'valid_country' => 'Le %s n\'est pas correct.'
+                        ]
+                    ],
+                    [
+                        'field' => 'situationFamilialeSalarie',
+                        'label' => 'stituation familiale',
+                        'rules' => 'trim|required|xss_clean',
+                        'errors' => [
+                            'required' => 'La %s est requise.'
+                        ]
+                    ],
+                    [
+                        'field' => 'nbEnfantSalarie',
+                        'label' => 'nombre d\'enfant(s)',
+                        'rules' => 'trim|required|xss_clean'
+                    ],
+                    [
+                        'field' => 'numSecSocSalarie',
+                        'label' => 'numéro de sécurité sociale',
+                        'rules' => 'trim|required|valid_numero_secu|xss_clean',
+                        'errors' => [
+                            'valid_numero_secu' => 'Le %s n\'est pas correct.'
+                        ]
+                    ],
                 ];
                 $this->form_validation->set_message('required', 'Le {field} est requis');
                 $this->form_validation->set_message('valid_date', 'La {field} est mauvaise');
